@@ -1,0 +1,361 @@
+---
+# NetBox v4.1.x clean install for Ubuntu 24.04 (idempotent)
+# - Clean clone of /opt/netbox at the exact tag
+# - Uses DATABASE (v4.1.x), correct REDIS, and stable SECRET_KEY from file
+# - Creates superuser non-interactively and waits for HTTP ready
+
+- name: Install NetBox (v4.1.x) on Ubuntu 24.04
+  hosts: netbox
+  become: yes
+  vars:
+    # --- Versions & Paths ---
+    netbox_version: "v4.1.11"
+    netbox_base_path: "/opt/netbox"
+    netbox_user: "netbox"
+    netbox_group: "netbox"
+
+    # --- PostgreSQL ---
+    postgresql_version: "16"
+    netbox_database_name: "netbox"
+    netbox_database_user: "netbox"
+    netbox_database_password: "EverythingOpen!2025"
+
+    # --- Redis ---
+    redis_password: "EverythingOpen!2025"
+
+    # --- Superuser ---
+    netbox_superuser_username: "admin"
+    netbox_superuser_password: "EverythingOpen!2025"
+    netbox_superuser_email: "admin@example.com"
+
+    # --- Plugins ---
+    netbox_enable_bgp_plugin: true
+    netbox_bgp_device_ext_page: "right"
+    netbox_bgp_top_level_menu: false
+
+    # Persist secret on remote so runs are idempotent
+    netbox_secret_file: "/etc/netbox/secret.key"
+
+  handlers:
+    - name: restart postgresql
+      systemd: { name: postgresql, state: restarted }
+    - name: restart redis
+      systemd: { name: redis-server, state: restarted }
+    - name: restart netbox
+      systemd: { name: netbox, state: restarted }
+    - name: restart netbox-rq
+      systemd: { name: netbox-rq, state: restarted }
+    - name: restart nginx
+      systemd: { name: nginx, state: restarted }
+
+  tasks:
+    # 0) Prep
+    - name: Ensure apt cache is up to date
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install system dependencies
+      apt:
+        name:
+          - postgresql
+          - postgresql-contrib
+          - libpq-dev
+          - python3-psycopg2
+          - redis-server
+          - python3
+          - python3-pip
+          - python3-venv
+          - python3-dev
+          - build-essential
+          - libxml2-dev
+          - libxslt1-dev
+          - libffi-dev
+          - libssl-dev
+          - zlib1g-dev
+          - nginx
+          - git
+          - curl
+          - wget
+          - acl
+        state: present
+
+    - name: Ensure /opt exists
+      file:
+        path: /opt
+        state: directory
+        mode: "0755"
+
+    # 1) Database
+    - name: Start & enable PostgreSQL
+      systemd: { name: postgresql, state: started, enabled: yes }
+
+    - name: Ensure NetBox DB user exists
+      become_user: postgres
+      community.postgresql.postgresql_user:
+        name: "{{ netbox_database_user }}"
+        password: "{{ netbox_database_password }}"
+        role_attr_flags: CREATEDB
+
+    - name: Ensure NetBox database exists (owned by netbox user)
+      become_user: postgres
+      community.postgresql.postgresql_db:
+        name: "{{ netbox_database_name }}"
+        owner: "{{ netbox_database_user }}"
+        encoding: "UTF-8"
+
+    - name: Ensure public schema owned by netbox user (idempotent)
+      become_user: postgres
+      community.postgresql.postgresql_query:
+        db: "{{ netbox_database_name }}"
+        query: "ALTER SCHEMA public OWNER TO {{ netbox_database_user }};"
+      changed_when: false
+
+    # 2) Redis
+    - name: Set Redis requirepass (idempotent)
+      lineinfile:
+        path: /etc/redis/redis.conf
+        regexp: '^(#\s*)?requirepass\s+.*$'
+        line: "requirepass {{ redis_password }}"
+      notify: restart redis
+
+    - name: Start & enable Redis
+      systemd: { name: redis-server, state: started, enabled: yes }
+
+    # 3) NetBox user
+    - name: Ensure group exists
+      group: { name: "{{ netbox_group }}", system: yes }
+
+    - name: Ensure user exists
+      user:
+        name: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        system: yes
+        shell: /bin/bash
+        home: "/home/{{ netbox_user }}"
+        createhome: yes
+
+    # 3.5) Stable SECRET_KEY (generated once on remote)
+    - name: Ensure /etc/netbox exists
+      file:
+        path: /etc/netbox
+        state: directory
+        owner: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        mode: "0750"
+
+    - name: Check if secret key exists
+      stat:
+        path: "{{ netbox_secret_file }}"
+      register: secret_stat
+
+    - name: Generate secret key (once)
+      copy:
+        dest: "{{ netbox_secret_file }}"
+        content: "{{ lookup('password', '/dev/null length=64 chars=ascii_letters,digits') }}"
+        owner: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        mode: "0600"
+      when: not secret_stat.stat.exists
+
+    - name: Read secret key (slurp from remote)
+      slurp:
+        src: "{{ netbox_secret_file }}"
+      register: secret_slurp
+
+    - name: Set fact with secret key value
+      set_fact:
+        netbox_secret_key: "{{ secret_slurp.content | b64decode }}"
+
+    # 4) Clean wipe + clone
+    - name: Stop NetBox services if present
+      systemd:
+        name: "{{ item }}"
+        state: stopped
+      loop: [netbox, netbox-rq]
+      failed_when: false
+      changed_when: false
+
+    - name: Remove existing NetBox tree
+      file:
+        path: "{{ netbox_base_path }}"
+        state: absent
+
+    - name: Clone NetBox {{ netbox_version }} (tag)
+      git:
+        repo: "https://github.com/netbox-community/netbox.git"
+        dest: "{{ netbox_base_path }}"
+        version: "{{ netbox_version }}"   # tag name (e.g., v4.1.11)
+        depth: 1
+        force: yes
+        accept_hostkey: yes
+        update: no
+
+    - name: Ensure ownership of NetBox tree
+      file:
+        path: "{{ netbox_base_path }}"
+        owner: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        recurse: yes
+
+    # 5) Python venv + deps
+    - name: Create Python venv
+      command: python3 -m venv {{ netbox_base_path }}/venv
+      args: { creates: "{{ netbox_base_path }}/venv/bin/activate" }
+
+    - name: Upgrade pip tooling in venv
+      pip:
+        name: [pip, setuptools, wheel]
+        state: latest
+        virtualenv: "{{ netbox_base_path }}/venv"
+
+    - name: Install NetBox Python requirements
+      pip:
+        requirements: "{{ netbox_base_path }}/requirements.txt"
+        virtualenv: "{{ netbox_base_path }}/venv"
+
+    # 6) Config (v4.1.x: DATABASE + REDIS) — SECRET from set_fact
+    - name: Render NetBox configuration.py
+      template:
+        src: configuration.py.j2
+        dest: "{{ netbox_base_path }}/netbox/netbox/configuration.py"
+        owner: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        mode: "0640"
+
+    # 7) DB migrate + collectstatic + superuser
+    - name: Run migrations
+      community.general.django_manage:
+        command: migrate --noinput
+        app_path: "{{ netbox_base_path }}/netbox"
+        virtualenv: "{{ netbox_base_path }}/venv"
+
+    - name: Collect static files
+      community.general.django_manage:
+        command: collectstatic --noinput
+        app_path: "{{ netbox_base_path }}/netbox"
+        virtualenv: "{{ netbox_base_path }}/venv"
+
+    - name: Check if NetBox superuser exists
+      shell: |
+        cd {{ netbox_base_path }}/netbox
+        echo "from django.contrib.auth import get_user_model; User = get_user_model(); print(User.objects.filter(username='{{ netbox_superuser_username }}').exists())" | {{ netbox_base_path }}/venv/bin/python manage.py shell
+      register: netbox_superuser_exists
+      changed_when: false
+      failed_when: netbox_superuser_exists.rc not in [0]
+
+    - name: Ensure NetBox superuser exists (non-interactive)
+      command:
+        cmd: >
+          {{ netbox_base_path }}/venv/bin/python manage.py createsuperuser --noinput
+      args:
+        chdir: "{{ netbox_base_path }}/netbox"
+      environment:
+        DJANGO_SUPERUSER_USERNAME: "{{ netbox_superuser_username }}"
+        DJANGO_SUPERUSER_PASSWORD: "{{ netbox_superuser_password }}"
+        DJANGO_SUPERUSER_EMAIL: "{{ netbox_superuser_email }}"
+      register: createsu
+      changed_when: "'created' in (createsu.stderr | default('')) or (createsu.rc == 0 and (createsu.stdout | default('')) == '')"
+      failed_when: createsu.rc not in [0,1]
+      when: (netbox_superuser_exists.stdout | default('')).strip() != 'True'
+
+    # 8) Gunicorn
+    - name: Copy gunicorn.py from contrib
+      copy:
+        src: "{{ netbox_base_path }}/contrib/gunicorn.py"
+        dest: "{{ netbox_base_path }}/gunicorn.py"
+        owner: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        mode: "0644"
+        remote_src: yes
+
+    - name: Ensure gunicorn binds to 127.0.0.1:8001
+      lineinfile:
+        path: "{{ netbox_base_path }}/gunicorn.py"
+        regexp: '^bind\s*='
+        line: "bind = '127.0.0.1:8001'"
+
+    # 9) Systemd services
+    - name: Install systemd units
+      copy:
+        src: "{{ item }}"
+        dest: /etc/systemd/system/
+        mode: "0644"
+        remote_src: yes
+      loop:
+        - "{{ netbox_base_path }}/contrib/netbox.service"
+        - "{{ netbox_base_path }}/contrib/netbox-rq.service"
+
+    - name: Reload systemd
+      systemd: { daemon_reload: yes }
+
+    - name: Enable & start NetBox services
+      systemd:
+        name: "{{ item }}"
+        state: started
+        enabled: yes
+      loop: [netbox, netbox-rq]
+
+    # 10) Nginx
+    - name: Render nginx site
+      template:
+        src: nginx.conf.j2
+        dest: /etc/nginx/sites-available/netbox
+        mode: "0644"
+
+    - name: Enable nginx site
+      file:
+        src: /etc/nginx/sites-available/netbox
+        dest: /etc/nginx/sites-enabled/netbox
+        state: link
+        force: yes
+
+    - name: Remove default site
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: Test nginx config
+      command: nginx -t
+      register: nginx_syntax
+      changed_when: false
+
+    - name: Restart nginx if syntax ok
+      systemd:
+        name: nginx
+        state: restarted
+        enabled: yes
+      when: nginx_syntax.rc == 0
+
+    # 11) Health checks
+    - name: Wait for gunicorn (NetBox) to listen on 127.0.0.1:8001
+      wait_for:
+        host: 127.0.0.1
+        port: 8001
+        state: started
+        timeout: 60
+
+    - name: Verify backend responds on /login (gunicorn directly)
+      uri:
+        url: "http://127.0.0.1:8001/login"
+        return_content: no
+        status_code: 200
+      register: backend_ok
+      failed_when: backend_ok.status not in [200]
+
+    - name: Wait for NetBox HTTP via nginx
+      uri:
+        url: "http://localhost/login"
+        status_code: 200
+        timeout: 60
+      register: netbox_ready
+      until: netbox_ready.status == 200
+      retries: 30
+      delay: 2
+
+    - name: Done
+      debug:
+        msg: |
+          NetBox {{ netbox_version }} is ready.
+          URL: http://{{ ansible_host }}
+          User: {{ netbox_superuser_username }} / {{ netbox_superuser_password }}

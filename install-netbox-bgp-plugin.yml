@@ -1,0 +1,80 @@
+---
+- name: Install NetBox BGP Plugin
+  hosts: netbox
+  become: yes
+  vars:
+    netbox_base_path: "/opt/netbox"
+    netbox_user: "netbox"
+    netbox_group: "netbox"
+
+    netbox_database_name: "netbox"
+    netbox_database_user: "netbox"
+    netbox_database_password: "EverythingOpen!2025"
+
+    redis_password: "EverythingOpen!2025"
+
+    netbox_bgp_plugin_version: "0.14.0"
+    netbox_enable_bgp_plugin: true
+    netbox_bgp_device_ext_page: "right"
+    netbox_bgp_top_level_menu: false
+
+  pre_tasks:
+    - name: Read NetBox secret key if not provided
+      stat:
+        path: "/etc/netbox/secret.key"
+      register: netbox_secret_file
+
+    - name: Slurp NetBox secret key
+      slurp:
+        src: "/etc/netbox/secret.key"
+      register: netbox_secret_slurp
+      when: netbox_secret_file.stat.exists
+
+    - name: Set fact with NetBox secret key
+      set_fact:
+        netbox_secret_key: "{{ netbox_secret_slurp.content | b64decode }}"
+      when: netbox_secret_file.stat.exists
+
+  tasks:
+    - name: Install netbox-bgp plugin into NetBox virtualenv
+      pip:
+        name: "netbox-bgp=={{ netbox_bgp_plugin_version }}"
+        virtualenv: "{{ netbox_base_path }}/venv"
+
+    - name: Ensure plugin pinned in local_requirements.txt
+      lineinfile:
+        path: "{{ netbox_base_path }}/local_requirements.txt"
+        line: "netbox-bgp=={{ netbox_bgp_plugin_version }}"
+        create: yes
+        owner: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        mode: "0644"
+
+    - name: Render updated NetBox configuration with plugin enabled
+      template:
+        src: configuration.py.j2
+        dest: "{{ netbox_base_path }}/netbox/netbox/configuration.py"
+        owner: "{{ netbox_user }}"
+        group: "{{ netbox_group }}"
+        mode: "0640"
+
+    - name: Run netbox-bgp database migrations
+      community.general.django_manage:
+        command: migrate netbox_bgp
+        app_path: "{{ netbox_base_path }}/netbox"
+        virtualenv: "{{ netbox_base_path }}/venv"
+
+    - name: Collect static files for plugin assets
+      community.general.django_manage:
+        command: collectstatic --noinput
+        app_path: "{{ netbox_base_path }}/netbox"
+        virtualenv: "{{ netbox_base_path }}/venv"
+
+    - name: Restart NetBox services for plugin activation
+      systemd:
+        name: "{{ item }}"
+        state: restarted
+        enabled: yes
+      loop:
+        - netbox
+        - netbox-rq

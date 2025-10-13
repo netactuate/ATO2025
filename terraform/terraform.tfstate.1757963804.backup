@@ -1,0 +1,662 @@
+{
+  "version": 4,
+  "terraform_version": "1.11.2",
+  "serial": 38,
+  "lineage": "8edaaaf4-6e31-1818-6c7f-189123f9a35f",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "netbox_asn",
+      "name": "local",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "asn": 63911,
+            "comments": "",
+            "description": "Demo ASN for anycast ingress",
+            "id": "1",
+            "rir_id": 1,
+            "tags": [],
+            "tags_all": []
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "netbox_rir.demo"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_asn",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "7",
+            "label": "ASN",
+            "name": "na_asn",
+            "required": false,
+            "type": "integer",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_bgp_ipv4_prefix",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "9",
+            "label": "BGP IPv4 Prefix",
+            "name": "na_bgp_ipv4_prefix",
+            "required": false,
+            "type": "text",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_bgp_peers",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "5",
+            "label": "BGP Peers (JSON)",
+            "name": "na_bgp_peers",
+            "required": false,
+            "type": "json",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_contract_id",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "6",
+            "label": "NetActuate Contract ID",
+            "name": "na_contract_id",
+            "required": false,
+            "type": "integer",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_image",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "2",
+            "label": "Image Name",
+            "name": "na_image",
+            "required": false,
+            "type": "text",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_image_id",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "3",
+            "label": "Image ID",
+            "name": "na_image_id",
+            "required": false,
+            "type": "integer",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_location_id",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "4",
+            "label": "NetActuate Location ID",
+            "name": "na_location_id",
+            "required": false,
+            "type": "integer",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_plan",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "11",
+            "label": "Plan (VRx)",
+            "name": "na_plan",
+            "required": false,
+            "type": "text",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_plan_id",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "12",
+            "label": "Plan ID",
+            "name": "na_plan_id",
+            "required": false,
+            "type": "integer",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_public_ipv4",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "1",
+            "label": "Public IPv4",
+            "name": "na_public_ipv4",
+            "required": false,
+            "type": "text",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_public_ipv6",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "8",
+            "label": "Public IPv6",
+            "name": "na_public_ipv6",
+            "required": false,
+            "type": "text",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_custom_field",
+      "name": "na_server_id",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "choice_set_id": null,
+            "content_types": [
+              "virtualization.virtualmachine"
+            ],
+            "default": "",
+            "description": "",
+            "group_name": "",
+            "id": "10",
+            "label": "NetActuate Server ID",
+            "name": "na_server_id",
+            "required": false,
+            "type": "integer",
+            "validation_maximum": 0,
+            "validation_minimum": 0,
+            "validation_regex": "",
+            "weight": 100
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_prefix",
+      "name": "anycast_v4",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "custom_fields": null,
+            "description": "Anycast IPv4 prefix",
+            "id": "1",
+            "is_pool": false,
+            "mark_utilized": false,
+            "prefix": "45.54.50.0/24",
+            "role_id": 0,
+            "site_id": 0,
+            "status": "active",
+            "tags": [],
+            "tags_all": [],
+            "tenant_id": 0,
+            "vlan_id": 0,
+            "vrf_id": 1
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "netbox_vrf.anycast"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_rir",
+      "name": "demo",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "RIR for demo ASN objects",
+            "id": "1",
+            "is_private": false,
+            "name": "Demo RIR",
+            "slug": "demo-rir"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "netbox_vrf",
+      "name": "anycast",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "",
+            "enforce_unique": true,
+            "id": "1",
+            "name": "ANYCAST",
+            "rd": "63911:1",
+            "tags": null,
+            "tags_all": [],
+            "tenant_id": 0
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.pop[\"CHI\"]",
+      "mode": "managed",
+      "type": "netbox_site",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "asn_ids": null,
+            "comments": "",
+            "custom_fields": null,
+            "description": "NetActuate PoP CHI",
+            "facility": "",
+            "group_id": 0,
+            "id": "3",
+            "latitude": 0,
+            "longitude": 0,
+            "name": "CHI",
+            "physical_address": "",
+            "region_id": 0,
+            "shipping_address": "",
+            "slug": "chi",
+            "status": "active",
+            "tags": null,
+            "tags_all": [],
+            "tenant_id": 0,
+            "timezone": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "netbox_custom_field.na_asn",
+            "netbox_custom_field.na_bgp_ipv4_prefix",
+            "netbox_custom_field.na_bgp_peers",
+            "netbox_custom_field.na_contract_id",
+            "netbox_custom_field.na_image",
+            "netbox_custom_field.na_image_id",
+            "netbox_custom_field.na_location_id",
+            "netbox_custom_field.na_plan",
+            "netbox_custom_field.na_plan_id",
+            "netbox_custom_field.na_public_ipv4",
+            "netbox_custom_field.na_public_ipv6",
+            "netbox_custom_field.na_server_id"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.pop[\"IAD3\"]",
+      "mode": "managed",
+      "type": "netbox_cluster_type",
+      "name": "hypervisor",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "1",
+            "name": "hypervisor",
+            "slug": "hypervisor"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "netbox_custom_field.na_asn",
+            "netbox_custom_field.na_bgp_ipv4_prefix",
+            "netbox_custom_field.na_bgp_peers",
+            "netbox_custom_field.na_contract_id",
+            "netbox_custom_field.na_image",
+            "netbox_custom_field.na_image_id",
+            "netbox_custom_field.na_location_id",
+            "netbox_custom_field.na_plan",
+            "netbox_custom_field.na_plan_id",
+            "netbox_custom_field.na_public_ipv4",
+            "netbox_custom_field.na_public_ipv6",
+            "netbox_custom_field.na_server_id"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.pop[\"IAD3\"]",
+      "mode": "managed",
+      "type": "netbox_site",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "asn_ids": null,
+            "comments": "",
+            "custom_fields": null,
+            "description": "NetActuate PoP IAD3",
+            "facility": "",
+            "group_id": 0,
+            "id": "2",
+            "latitude": 0,
+            "longitude": 0,
+            "name": "IAD3",
+            "physical_address": "",
+            "region_id": 0,
+            "shipping_address": "",
+            "slug": "iad3",
+            "status": "active",
+            "tags": null,
+            "tags_all": [],
+            "tenant_id": 0,
+            "timezone": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "netbox_custom_field.na_asn",
+            "netbox_custom_field.na_bgp_ipv4_prefix",
+            "netbox_custom_field.na_bgp_peers",
+            "netbox_custom_field.na_contract_id",
+            "netbox_custom_field.na_image",
+            "netbox_custom_field.na_image_id",
+            "netbox_custom_field.na_location_id",
+            "netbox_custom_field.na_plan",
+            "netbox_custom_field.na_plan_id",
+            "netbox_custom_field.na_public_ipv4",
+            "netbox_custom_field.na_public_ipv6",
+            "netbox_custom_field.na_server_id"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.pop[\"RDU\"]",
+      "mode": "managed",
+      "type": "netbox_site",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/e-breuninger/netbox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "asn_ids": null,
+            "comments": "",
+            "custom_fields": null,
+            "description": "NetActuate PoP RDU",
+            "facility": "",
+            "group_id": 0,
+            "id": "1",
+            "latitude": 0,
+            "longitude": 0,
+            "name": "RDU",
+            "physical_address": "",
+            "region_id": 0,
+            "shipping_address": "",
+            "slug": "rdu",
+            "status": "active",
+            "tags": null,
+            "tags_all": [],
+            "tenant_id": 0,
+            "timezone": ""
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "netbox_custom_field.na_asn",
+            "netbox_custom_field.na_bgp_ipv4_prefix",
+            "netbox_custom_field.na_bgp_peers",
+            "netbox_custom_field.na_contract_id",
+            "netbox_custom_field.na_image",
+            "netbox_custom_field.na_image_id",
+            "netbox_custom_field.na_location_id",
+            "netbox_custom_field.na_plan",
+            "netbox_custom_field.na_plan_id",
+            "netbox_custom_field.na_public_ipv4",
+            "netbox_custom_field.na_public_ipv6",
+            "netbox_custom_field.na_server_id"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

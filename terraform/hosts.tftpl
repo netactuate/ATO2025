@@ -1,0 +1,17 @@
+[master]
+localhost ansible_connection=local ansible_python_interpreter=python3
+
+[nodes:children]
+backend
+
+[backend:children]
+%{ for pop in pop_keys ~}
+${pop}
+%{ endfor ~}
+
+%{ for pop in pop_keys ~}
+[${pop}]
+%{ for host in pops[pop] ~}
+${host.hostname} location=${pop} worker=${host.worker_key} bgp_enabled=True plan='${host.plan}' mbpkgid=${host.id} ansible_host=${host.public_ipv4}
+%{ endfor ~}
+%{ endfor ~}

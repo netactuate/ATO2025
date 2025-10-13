@@ -1,0 +1,4157 @@
+{
+  "count": 74,
+  "next": "http://104.225.115.196/api/plugins/bgp/session/?format=json&limit=50&offset=50",
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/1/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-acc.worker.demo:anycast-ingress-acc.worker.demo-v6-2c0f-edb0-4000-1--12a",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 68,
+        "url": "http://104.225.115.196/api/dcim/sites/68/?format=json",
+        "display": "ACC",
+        "name": "ACC",
+        "slug": "acc",
+        "description": "NetActuate PoP ACC"
+      },
+      "tenant": null,
+      "device": {
+        "id": 9,
+        "url": "http://104.225.115.196/api/dcim/devices/9/?format=json",
+        "display": "anycast-ingress-acc.worker.demo",
+        "name": "anycast-ingress-acc.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 74,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/74/?format=json",
+        "display": "2c0f:edb0:4000:1::339/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2c0f:edb0:4000:1::339/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 147,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/147/?format=json",
+        "display": "2c0f:edb0:4000:1::12a/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2c0f:edb0:4000:1::12a/128",
+        "description": "NetActuate peer for anycast-ingress-acc.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:51.723037Z",
+      "last_updated": "2025-10-06T04:51:51.723055Z",
+      "name": "anycast-ingress-acc.worker.demo-v6-2c0f-edb0-4000-1--12a",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 2,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/2/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-mci.worker.demo:anycast-ingress-mci.worker.demo-v6-2607-f740-75-1--c6",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 44,
+        "url": "http://104.225.115.196/api/dcim/sites/44/?format=json",
+        "display": "MCI",
+        "name": "MCI",
+        "slug": "mci",
+        "description": "NetActuate PoP MCI"
+      },
+      "tenant": null,
+      "device": {
+        "id": 7,
+        "url": "http://104.225.115.196/api/dcim/devices/7/?format=json",
+        "display": "anycast-ingress-mci.worker.demo",
+        "name": "anycast-ingress-mci.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 101,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/101/?format=json",
+        "display": "2607:f740:75:1::3b4/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:75:1::3b4/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 152,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/152/?format=json",
+        "display": "2607:f740:75:1::c6/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:75:1::c6/128",
+        "description": "NetActuate peer for anycast-ingress-mci.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:51.815375Z",
+      "last_updated": "2025-10-06T04:51:51.815394Z",
+      "name": "anycast-ingress-mci.worker.demo-v6-2607-f740-75-1--c6",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 3,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/3/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-syd.worker.demo:anycast-ingress-syd.worker.demo-v6-2403-2500-9000-1--c28",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 72,
+        "url": "http://104.225.115.196/api/dcim/sites/72/?format=json",
+        "display": "SYD",
+        "name": "SYD",
+        "slug": "syd",
+        "description": "NetActuate PoP SYD"
+      },
+      "tenant": null,
+      "device": {
+        "id": 19,
+        "url": "http://104.225.115.196/api/dcim/devices/19/?format=json",
+        "display": "anycast-ingress-syd.worker.demo",
+        "name": "anycast-ingress-syd.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 102,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/102/?format=json",
+        "display": "2403:2500:9000:1::309/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2403:2500:9000:1::309/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 181,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/181/?format=json",
+        "display": "2403:2500:9000:1::c28/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2403:2500:9000:1::c28/128",
+        "description": "NetActuate peer for anycast-ingress-syd.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:51.885725Z",
+      "last_updated": "2025-10-06T04:51:51.885743Z",
+      "name": "anycast-ingress-syd.worker.demo-v6-2403-2500-9000-1--c28",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 4,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/4/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-waw.worker.demo:anycast-ingress-waw.worker.demo-v4-45-159-98-175",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 64,
+        "url": "http://104.225.115.196/api/dcim/sites/64/?format=json",
+        "display": "WAW",
+        "name": "WAW",
+        "slug": "waw",
+        "description": "NetActuate PoP WAW"
+      },
+      "tenant": null,
+      "device": {
+        "id": 17,
+        "url": "http://104.225.115.196/api/dcim/devices/17/?format=json",
+        "display": "anycast-ingress-waw.worker.demo",
+        "name": "anycast-ingress-waw.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 62,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/62/?format=json",
+        "display": "45.159.98.231/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "45.159.98.231/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 138,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/138/?format=json",
+        "display": "45.159.98.175/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "45.159.98.175/32",
+        "description": "NetActuate peer for anycast-ingress-waw.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:51.986178Z",
+      "last_updated": "2025-10-06T04:51:51.986201Z",
+      "name": "anycast-ingress-waw.worker.demo-v4-45-159-98-175",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 5,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/5/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-pdx.worker.demo:anycast-ingress-pdx.worker.demo-v4-104-225-28-192",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 43,
+        "url": "http://104.225.115.196/api/dcim/sites/43/?format=json",
+        "display": "PDX",
+        "name": "PDX",
+        "slug": "pdx",
+        "description": "NetActuate PoP PDX"
+      },
+      "tenant": null,
+      "device": {
+        "id": 4,
+        "url": "http://104.225.115.196/api/dcim/devices/4/?format=json",
+        "display": "anycast-ingress-pdx.worker.demo",
+        "name": "anycast-ingress-pdx.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 36,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/36/?format=json",
+        "display": "104.225.28.189/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.28.189/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 137,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/137/?format=json",
+        "display": "104.225.28.192/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.28.192/32",
+        "description": "NetActuate peer for anycast-ingress-pdx.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.111421Z",
+      "last_updated": "2025-10-06T04:51:52.111441Z",
+      "name": "anycast-ingress-pdx.worker.demo-v4-104-225-28-192",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 6,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/6/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-tor.worker.demo:anycast-ingress-tor.worker.demo-v4-162-248-221-88",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 53,
+        "url": "http://104.225.115.196/api/dcim/sites/53/?format=json",
+        "display": "TOR",
+        "name": "TOR",
+        "slug": "tor",
+        "description": "NetActuate PoP TOR"
+      },
+      "tenant": null,
+      "device": {
+        "id": 3,
+        "url": "http://104.225.115.196/api/dcim/devices/3/?format=json",
+        "display": "anycast-ingress-tor.worker.demo",
+        "name": "anycast-ingress-tor.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 57,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/57/?format=json",
+        "display": "162.248.221.93/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "162.248.221.93/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 126,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/126/?format=json",
+        "display": "162.248.221.88/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "162.248.221.88/32",
+        "description": "NetActuate peer for anycast-ingress-tor.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.134766Z",
+      "last_updated": "2025-10-06T04:51:52.134787Z",
+      "name": "anycast-ingress-tor.worker.demo-v4-162-248-221-88",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 7,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/7/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-mia.worker.demo:anycast-ingress-mia.worker.demo-v4-192-73-243-67",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 52,
+        "url": "http://104.225.115.196/api/dcim/sites/52/?format=json",
+        "display": "MIA",
+        "name": "MIA",
+        "slug": "mia",
+        "description": "NetActuate PoP MIA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 10,
+        "url": "http://104.225.115.196/api/dcim/devices/10/?format=json",
+        "display": "anycast-ingress-mia.worker.demo",
+        "name": "anycast-ingress-mia.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 41,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/41/?format=json",
+        "display": "192.73.243.31/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.243.31/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 130,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/130/?format=json",
+        "display": "192.73.243.67/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.243.67/32",
+        "description": "NetActuate peer for anycast-ingress-mia.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.284738Z",
+      "last_updated": "2025-10-06T04:51:52.284759Z",
+      "name": "anycast-ingress-mia.worker.demo-v4-192-73-243-67",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 8,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/8/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-phx.worker.demo:anycast-ingress-phx.worker.demo-v4-104-225-103-229",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 62,
+        "url": "http://104.225.115.196/api/dcim/sites/62/?format=json",
+        "display": "PHX",
+        "name": "PHX",
+        "slug": "phx",
+        "description": "NetActuate PoP PHX"
+      },
+      "tenant": null,
+      "device": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/dcim/devices/5/?format=json",
+        "display": "anycast-ingress-phx.worker.demo",
+        "name": "anycast-ingress-phx.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 55,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/55/?format=json",
+        "display": "104.225.103.146/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.103.146/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 117,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/117/?format=json",
+        "display": "104.225.103.229/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.103.229/32",
+        "description": "NetActuate peer for anycast-ingress-phx.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.339005Z",
+      "last_updated": "2025-10-06T04:51:52.339027Z",
+      "name": "anycast-ingress-phx.worker.demo-v4-104-225-103-229",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 10,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/10/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-syd.worker.demo:anycast-ingress-syd.worker.demo-v4-43-245-48-206",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 72,
+        "url": "http://104.225.115.196/api/dcim/sites/72/?format=json",
+        "display": "SYD",
+        "name": "SYD",
+        "slug": "syd",
+        "description": "NetActuate PoP SYD"
+      },
+      "tenant": null,
+      "device": {
+        "id": 19,
+        "url": "http://104.225.115.196/api/dcim/devices/19/?format=json",
+        "display": "anycast-ingress-syd.worker.demo",
+        "name": "anycast-ingress-syd.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 68,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/68/?format=json",
+        "display": "43.245.48.176/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "43.245.48.176/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 112,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/112/?format=json",
+        "display": "43.245.48.206/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "43.245.48.206/32",
+        "description": "NetActuate peer for anycast-ingress-syd.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.484518Z",
+      "last_updated": "2025-10-06T04:51:52.484540Z",
+      "name": "anycast-ingress-syd.worker.demo-v4-43-245-48-206",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 9,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/9/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-lax.worker.demo:anycast-ingress-lax.worker.demo-v4-192-73-244-224",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 56,
+        "url": "http://104.225.115.196/api/dcim/sites/56/?format=json",
+        "display": "LAX",
+        "name": "LAX",
+        "slug": "lax",
+        "description": "NetActuate PoP LAX"
+      },
+      "tenant": null,
+      "device": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/dcim/devices/6/?format=json",
+        "display": "anycast-ingress-lax.worker.demo",
+        "name": "anycast-ingress-lax.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 46,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/46/?format=json",
+        "display": "192.73.244.148/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.244.148/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 122,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/122/?format=json",
+        "display": "192.73.244.224/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.244.224/32",
+        "description": "NetActuate peer for anycast-ingress-lax.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.485271Z",
+      "last_updated": "2025-10-06T04:51:52.485284Z",
+      "name": "anycast-ingress-lax.worker.demo-v4-192-73-244-224",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 11,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/11/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-dfw.worker.demo:anycast-ingress-dfw.worker.demo-v4-192-73-248-175",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 48,
+        "url": "http://104.225.115.196/api/dcim/sites/48/?format=json",
+        "display": "DFW",
+        "name": "DFW",
+        "slug": "dfw",
+        "description": "NetActuate PoP DFW"
+      },
+      "tenant": null,
+      "device": {
+        "id": 2,
+        "url": "http://104.225.115.196/api/dcim/devices/2/?format=json",
+        "display": "anycast-ingress-dfw.worker.demo",
+        "name": "anycast-ingress-dfw.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 43,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/43/?format=json",
+        "display": "192.73.248.213/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.248.213/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 111,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/111/?format=json",
+        "display": "192.73.248.175/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.248.175/32",
+        "description": "NetActuate peer for anycast-ingress-dfw.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.568834Z",
+      "last_updated": "2025-10-06T04:51:52.568856Z",
+      "name": "anycast-ingress-dfw.worker.demo-v4-192-73-248-175",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 12,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/12/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-acc.worker.demo:anycast-ingress-acc.worker.demo-v4-102-213-153-137",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 68,
+        "url": "http://104.225.115.196/api/dcim/sites/68/?format=json",
+        "display": "ACC",
+        "name": "ACC",
+        "slug": "acc",
+        "description": "NetActuate PoP ACC"
+      },
+      "tenant": null,
+      "device": {
+        "id": 9,
+        "url": "http://104.225.115.196/api/dcim/devices/9/?format=json",
+        "display": "anycast-ingress-acc.worker.demo",
+        "name": "anycast-ingress-acc.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 61,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/61/?format=json",
+        "display": "102.213.153.16/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "102.213.153.16/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 115,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/115/?format=json",
+        "display": "102.213.153.137/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "102.213.153.137/32",
+        "description": "NetActuate peer for anycast-ingress-acc.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.586862Z",
+      "last_updated": "2025-10-06T04:51:52.586883Z",
+      "name": "anycast-ingress-acc.worker.demo-v4-102-213-153-137",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 13,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/13/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-phx.worker.demo:anycast-ingress-phx.worker.demo-v6-2607-f740-15-20--25f",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 62,
+        "url": "http://104.225.115.196/api/dcim/sites/62/?format=json",
+        "display": "PHX",
+        "name": "PHX",
+        "slug": "phx",
+        "description": "NetActuate PoP PHX"
+      },
+      "tenant": null,
+      "device": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/dcim/devices/5/?format=json",
+        "display": "anycast-ingress-phx.worker.demo",
+        "name": "anycast-ingress-phx.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 92,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/92/?format=json",
+        "display": "2607:f740:15:20::251/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:15:20::251/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 154,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/154/?format=json",
+        "display": "2607:f740:15:20::25f/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:15:20::25f/128",
+        "description": "NetActuate peer for anycast-ingress-phx.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.588632Z",
+      "last_updated": "2025-10-06T04:51:52.588651Z",
+      "name": "anycast-ingress-phx.worker.demo-v6-2607-f740-15-20--25f",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 14,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/14/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-tor.worker.demo:anycast-ingress-tor.worker.demo-v6-2607-f740-50--de5",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 53,
+        "url": "http://104.225.115.196/api/dcim/sites/53/?format=json",
+        "display": "TOR",
+        "name": "TOR",
+        "slug": "tor",
+        "description": "NetActuate PoP TOR"
+      },
+      "tenant": null,
+      "device": {
+        "id": 3,
+        "url": "http://104.225.115.196/api/dcim/devices/3/?format=json",
+        "display": "anycast-ingress-tor.worker.demo",
+        "name": "anycast-ingress-tor.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 106,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/106/?format=json",
+        "display": "2607:f740:50::d3d/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:50::d3d/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 160,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/160/?format=json",
+        "display": "2607:f740:50::de5/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:50::de5/128",
+        "description": "NetActuate peer for anycast-ingress-tor.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:52.715476Z",
+      "last_updated": "2025-10-06T04:51:52.715494Z",
+      "name": "anycast-ingress-tor.worker.demo-v6-2607-f740-50--de5",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 15,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/15/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-yul.worker.demo:anycast-ingress-yul.worker.demo-v6-2607-f740-74-1--1c8",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 61,
+        "url": "http://104.225.115.196/api/dcim/sites/61/?format=json",
+        "display": "YUL",
+        "name": "YUL",
+        "slug": "yul",
+        "description": "NetActuate PoP YUL"
+      },
+      "tenant": null,
+      "device": {
+        "id": 14,
+        "url": "http://104.225.115.196/api/dcim/devices/14/?format=json",
+        "display": "anycast-ingress-yul.worker.demo",
+        "name": "anycast-ingress-yul.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 91,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/91/?format=json",
+        "display": "2607:f740:74:1::3e/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:74:1::3e/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 168,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/168/?format=json",
+        "display": "2607:f740:74:1::1c8/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:74:1::1c8/128",
+        "description": "NetActuate peer for anycast-ingress-yul.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.037769Z",
+      "last_updated": "2025-10-06T04:51:53.037790Z",
+      "name": "anycast-ingress-yul.worker.demo-v6-2607-f740-74-1--1c8",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 16,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/16/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-mci.worker.demo:anycast-ingress-mci.worker.demo-v4-104-225-19-196",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 44,
+        "url": "http://104.225.115.196/api/dcim/sites/44/?format=json",
+        "display": "MCI",
+        "name": "MCI",
+        "slug": "mci",
+        "description": "NetActuate PoP MCI"
+      },
+      "tenant": null,
+      "device": {
+        "id": 7,
+        "url": "http://104.225.115.196/api/dcim/devices/7/?format=json",
+        "display": "anycast-ingress-mci.worker.demo",
+        "name": "anycast-ingress-mci.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 58,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/58/?format=json",
+        "display": "104.225.19.229/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.19.229/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 141,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/141/?format=json",
+        "display": "104.225.19.196/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.19.196/32",
+        "description": "NetActuate peer for anycast-ingress-mci.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.046976Z",
+      "last_updated": "2025-10-06T04:51:53.047006Z",
+      "name": "anycast-ingress-mci.worker.demo-v4-104-225-19-196",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 17,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/17/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-nbo.worker.demo:anycast-ingress-nbo.worker.demo-v6-2c0f-edb0-2000-1--41",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 67,
+        "url": "http://104.225.115.196/api/dcim/sites/67/?format=json",
+        "display": "NBO",
+        "name": "NBO",
+        "slug": "nbo",
+        "description": "NetActuate PoP NBO"
+      },
+      "tenant": null,
+      "device": {
+        "id": 18,
+        "url": "http://104.225.115.196/api/dcim/devices/18/?format=json",
+        "display": "anycast-ingress-nbo.worker.demo",
+        "name": "anycast-ingress-nbo.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 95,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/95/?format=json",
+        "display": "2c0f:edb0:2000:1::1ba/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2c0f:edb0:2000:1::1ba/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 180,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/180/?format=json",
+        "display": "2c0f:edb0:2000:1::41/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2c0f:edb0:2000:1::41/128",
+        "description": "NetActuate peer for anycast-ingress-nbo.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.124894Z",
+      "last_updated": "2025-10-06T04:51:53.124910Z",
+      "name": "anycast-ingress-nbo.worker.demo-v6-2c0f-edb0-2000-1--41",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 18,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/18/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-chi.worker.demo:anycast-ingress-chi.worker.demo-v6-2607-f740-e--e9e",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 40,
+        "url": "http://104.225.115.196/api/dcim/sites/40/?format=json",
+        "display": "CHI",
+        "name": "CHI",
+        "slug": "chi",
+        "description": "NetActuate PoP CHI"
+      },
+      "tenant": null,
+      "device": {
+        "id": 15,
+        "url": "http://104.225.115.196/api/dcim/devices/15/?format=json",
+        "display": "anycast-ingress-chi.worker.demo",
+        "name": "anycast-ingress-chi.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 84,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/84/?format=json",
+        "display": "2607:f740:e::912/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:e::912/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 174,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/174/?format=json",
+        "display": "2607:f740:e::e9e/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:e::e9e/128",
+        "description": "NetActuate peer for anycast-ingress-chi.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.123879Z",
+      "last_updated": "2025-10-06T04:51:53.123902Z",
+      "name": "anycast-ingress-chi.worker.demo-v6-2607-f740-e--e9e",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 19,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/19/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-fra.worker.demo:anycast-ingress-fra.worker.demo-v4-185-40-234-32",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 51,
+        "url": "http://104.225.115.196/api/dcim/sites/51/?format=json",
+        "display": "FRA",
+        "name": "FRA",
+        "slug": "fra",
+        "description": "NetActuate PoP FRA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 16,
+        "url": "http://104.225.115.196/api/dcim/devices/16/?format=json",
+        "display": "anycast-ingress-fra.worker.demo",
+        "name": "anycast-ingress-fra.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 45,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/45/?format=json",
+        "display": "185.40.234.215/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "185.40.234.215/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 123,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/123/?format=json",
+        "display": "185.40.234.32/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "185.40.234.32/32",
+        "description": "NetActuate peer for anycast-ingress-fra.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.144431Z",
+      "last_updated": "2025-10-06T04:51:53.144449Z",
+      "name": "anycast-ingress-fra.worker.demo-v4-185-40-234-32",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 20,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/20/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-nbo.worker.demo:anycast-ingress-nbo.worker.demo-v4-102-67-167-110",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 67,
+        "url": "http://104.225.115.196/api/dcim/sites/67/?format=json",
+        "display": "NBO",
+        "name": "NBO",
+        "slug": "nbo",
+        "description": "NetActuate PoP NBO"
+      },
+      "tenant": null,
+      "device": {
+        "id": 18,
+        "url": "http://104.225.115.196/api/dcim/devices/18/?format=json",
+        "display": "anycast-ingress-nbo.worker.demo",
+        "name": "anycast-ingress-nbo.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 63,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/63/?format=json",
+        "display": "102.67.167.162/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "102.67.167.162/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 113,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/113/?format=json",
+        "display": "102.67.167.110/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "102.67.167.110/32",
+        "description": "NetActuate peer for anycast-ingress-nbo.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.187623Z",
+      "last_updated": "2025-10-06T04:51:53.187637Z",
+      "name": "anycast-ingress-nbo.worker.demo-v4-102-67-167-110",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 21,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/21/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-fra.worker.demo:anycast-ingress-fra.worker.demo-v6-2a00-dd80-20--cf2",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 51,
+        "url": "http://104.225.115.196/api/dcim/sites/51/?format=json",
+        "display": "FRA",
+        "name": "FRA",
+        "slug": "fra",
+        "description": "NetActuate PoP FRA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 16,
+        "url": "http://104.225.115.196/api/dcim/devices/16/?format=json",
+        "display": "anycast-ingress-fra.worker.demo",
+        "name": "anycast-ingress-fra.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 107,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/107/?format=json",
+        "display": "2a00:dd80:20::b40/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:20::b40/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 151,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/151/?format=json",
+        "display": "2a00:dd80:20::cf2/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:20::cf2/128",
+        "description": "NetActuate peer for anycast-ingress-fra.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.182578Z",
+      "last_updated": "2025-10-06T04:51:53.182599Z",
+      "name": "anycast-ingress-fra.worker.demo-v6-2a00-dd80-20--cf2",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 22,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/22/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-chi.worker.demo:anycast-ingress-chi.worker.demo-v4-209-177-158-22",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 40,
+        "url": "http://104.225.115.196/api/dcim/sites/40/?format=json",
+        "display": "CHI",
+        "name": "CHI",
+        "slug": "chi",
+        "description": "NetActuate PoP CHI"
+      },
+      "tenant": null,
+      "device": {
+        "id": 15,
+        "url": "http://104.225.115.196/api/dcim/devices/15/?format=json",
+        "display": "anycast-ingress-chi.worker.demo",
+        "name": "anycast-ingress-chi.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 39,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/39/?format=json",
+        "display": "209.177.158.233/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "209.177.158.233/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 134,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/134/?format=json",
+        "display": "209.177.158.22/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "209.177.158.22/32",
+        "description": "NetActuate peer for anycast-ingress-chi.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.201853Z",
+      "last_updated": "2025-10-06T04:51:53.201872Z",
+      "name": "anycast-ingress-chi.worker.demo-v4-209-177-158-22",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 23,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/23/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-den.worker.demo:anycast-ingress-den.worker.demo-v6-2607-f740-16--a7",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 41,
+        "url": "http://104.225.115.196/api/dcim/sites/41/?format=json",
+        "display": "DEN",
+        "name": "DEN",
+        "slug": "den",
+        "description": "NetActuate PoP DEN"
+      },
+      "tenant": null,
+      "device": {
+        "id": 13,
+        "url": "http://104.225.115.196/api/dcim/devices/13/?format=json",
+        "display": "anycast-ingress-den.worker.demo",
+        "name": "anycast-ingress-den.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 99,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/99/?format=json",
+        "display": "2607:f740:16::573/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:16::573/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 150,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/150/?format=json",
+        "display": "2607:f740:16::a7/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:16::a7/128",
+        "description": "NetActuate peer for anycast-ingress-den.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.403259Z",
+      "last_updated": "2025-10-06T04:51:53.403277Z",
+      "name": "anycast-ingress-den.worker.demo-v6-2607-f740-16--a7",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 24,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/24/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-den.worker.demo:anycast-ingress-den.worker.demo-v4-192-73-242-90",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 41,
+        "url": "http://104.225.115.196/api/dcim/sites/41/?format=json",
+        "display": "DEN",
+        "name": "DEN",
+        "slug": "den",
+        "description": "NetActuate PoP DEN"
+      },
+      "tenant": null,
+      "device": {
+        "id": 13,
+        "url": "http://104.225.115.196/api/dcim/devices/13/?format=json",
+        "display": "anycast-ingress-den.worker.demo",
+        "name": "anycast-ingress-den.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 35,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/35/?format=json",
+        "display": "192.73.242.78/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.242.78/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 142,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/142/?format=json",
+        "display": "192.73.242.90/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.242.90/32",
+        "description": "NetActuate peer for anycast-ingress-den.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.404302Z",
+      "last_updated": "2025-10-06T04:51:53.404321Z",
+      "name": "anycast-ingress-den.worker.demo-v4-192-73-242-90",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 25,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/25/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-rdu.worker.demo:anycast-ingress-rdu.worker.demo-v4-104-225-1-249",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 42,
+        "url": "http://104.225.115.196/api/dcim/sites/42/?format=json",
+        "display": "RDU",
+        "name": "RDU",
+        "slug": "rdu",
+        "description": "NetActuate PoP RDU"
+      },
+      "tenant": null,
+      "device": {
+        "id": 12,
+        "url": "http://104.225.115.196/api/dcim/devices/12/?format=json",
+        "display": "anycast-ingress-rdu.worker.demo",
+        "name": "anycast-ingress-rdu.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 37,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/37/?format=json",
+        "display": "104.225.1.79/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.1.79/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 118,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/118/?format=json",
+        "display": "104.225.1.249/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.1.249/32",
+        "description": "NetActuate peer for anycast-ingress-rdu.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.443592Z",
+      "last_updated": "2025-10-06T04:51:53.443609Z",
+      "name": "anycast-ingress-rdu.worker.demo-v4-104-225-1-249",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 26,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/26/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-rdu.worker.demo:anycast-ingress-rdu.worker.demo-v6-2607-fc50-0-15--ae",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 42,
+        "url": "http://104.225.115.196/api/dcim/sites/42/?format=json",
+        "display": "RDU",
+        "name": "RDU",
+        "slug": "rdu",
+        "description": "NetActuate PoP RDU"
+      },
+      "tenant": null,
+      "device": {
+        "id": 12,
+        "url": "http://104.225.115.196/api/dcim/devices/12/?format=json",
+        "display": "anycast-ingress-rdu.worker.demo",
+        "name": "anycast-ingress-rdu.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 82,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/82/?format=json",
+        "display": "2607:fc50:0:15::3c8/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:fc50:0:15::3c8/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 165,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/165/?format=json",
+        "display": "2607:fc50:0:15::ae/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:fc50:0:15::ae/128",
+        "description": "NetActuate peer for anycast-ingress-rdu.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.488730Z",
+      "last_updated": "2025-10-06T04:51:53.488750Z",
+      "name": "anycast-ingress-rdu.worker.demo-v6-2607-fc50-0-15--ae",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 27,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/27/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-yul.worker.demo:anycast-ingress-yul.worker.demo-v4-104-225-25-23",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 61,
+        "url": "http://104.225.115.196/api/dcim/sites/61/?format=json",
+        "display": "YUL",
+        "name": "YUL",
+        "slug": "yul",
+        "description": "NetActuate PoP YUL"
+      },
+      "tenant": null,
+      "device": {
+        "id": 14,
+        "url": "http://104.225.115.196/api/dcim/devices/14/?format=json",
+        "display": "anycast-ingress-yul.worker.demo",
+        "name": "anycast-ingress-yul.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 51,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/51/?format=json",
+        "display": "104.225.25.135/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.25.135/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 132,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/132/?format=json",
+        "display": "104.225.25.23/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.25.23/32",
+        "description": "NetActuate peer for anycast-ingress-yul.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.518471Z",
+      "last_updated": "2025-10-06T04:51:53.518494Z",
+      "name": "anycast-ingress-yul.worker.demo-v4-104-225-25-23",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 28,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/28/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-iad3.worker.demo:anycast-ingress-iad3.worker.demo-v4-104-225-11-111",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 38,
+        "url": "http://104.225.115.196/api/dcim/sites/38/?format=json",
+        "display": "IAD3",
+        "name": "IAD3",
+        "slug": "iad3",
+        "description": "NetActuate PoP IAD3"
+      },
+      "tenant": null,
+      "device": {
+        "id": 11,
+        "url": "http://104.225.115.196/api/dcim/devices/11/?format=json",
+        "display": "anycast-ingress-iad3.worker.demo",
+        "name": "anycast-ingress-iad3.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 40,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/40/?format=json",
+        "display": "104.225.11.116/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.11.116/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 114,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/114/?format=json",
+        "display": "104.225.11.111/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "104.225.11.111/32",
+        "description": "NetActuate peer for anycast-ingress-iad3.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.535743Z",
+      "last_updated": "2025-10-06T04:51:53.535754Z",
+      "name": "anycast-ingress-iad3.worker.demo-v4-104-225-11-111",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 29,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/29/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-iad3.worker.demo:anycast-ingress-iad3.worker.demo-v6-2607-fc50-3000-2--2bf",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 38,
+        "url": "http://104.225.115.196/api/dcim/sites/38/?format=json",
+        "display": "IAD3",
+        "name": "IAD3",
+        "slug": "iad3",
+        "description": "NetActuate PoP IAD3"
+      },
+      "tenant": null,
+      "device": {
+        "id": 11,
+        "url": "http://104.225.115.196/api/dcim/devices/11/?format=json",
+        "display": "anycast-ingress-iad3.worker.demo",
+        "name": "anycast-ingress-iad3.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 100,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/100/?format=json",
+        "display": "2607:fc50:3000:2::347/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:fc50:3000:2::347/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 153,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/153/?format=json",
+        "display": "2607:fc50:3000:2::2bf/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:fc50:3000:2::2bf/128",
+        "description": "NetActuate peer for anycast-ingress-iad3.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.595096Z",
+      "last_updated": "2025-10-06T04:51:53.595114Z",
+      "name": "anycast-ingress-iad3.worker.demo-v6-2607-fc50-3000-2--2bf",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 30,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/30/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-mia.worker.demo:anycast-ingress-mia.worker.demo-v6-2607-f740-17--f7d",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 52,
+        "url": "http://104.225.115.196/api/dcim/sites/52/?format=json",
+        "display": "MIA",
+        "name": "MIA",
+        "slug": "mia",
+        "description": "NetActuate PoP MIA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 10,
+        "url": "http://104.225.115.196/api/dcim/devices/10/?format=json",
+        "display": "anycast-ingress-mia.worker.demo",
+        "name": "anycast-ingress-mia.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 77,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/77/?format=json",
+        "display": "2607:f740:17::f4f/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:17::f4f/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 179,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/179/?format=json",
+        "display": "2607:f740:17::f7d/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:17::f7d/128",
+        "description": "NetActuate peer for anycast-ingress-mia.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.640570Z",
+      "last_updated": "2025-10-06T04:51:53.640585Z",
+      "name": "anycast-ingress-mia.worker.demo-v6-2607-f740-17--f7d",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 31,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/31/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-lga.worker.demo:anycast-ingress-lga.worker.demo-v4-209-177-145-69",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 54,
+        "url": "http://104.225.115.196/api/dcim/sites/54/?format=json",
+        "display": "LGA",
+        "name": "LGA",
+        "slug": "lga",
+        "description": "NetActuate PoP LGA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 8,
+        "url": "http://104.225.115.196/api/dcim/devices/8/?format=json",
+        "display": "anycast-ingress-lga.worker.demo",
+        "name": "anycast-ingress-lga.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 47,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/47/?format=json",
+        "display": "209.177.145.228/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "209.177.145.228/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 116,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/116/?format=json",
+        "display": "209.177.145.69/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "209.177.145.69/32",
+        "description": "NetActuate peer for anycast-ingress-lga.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.678512Z",
+      "last_updated": "2025-10-06T04:51:53.678535Z",
+      "name": "anycast-ingress-lga.worker.demo-v4-209-177-145-69",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 32,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/32/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-pdx.worker.demo:anycast-ingress-pdx.worker.demo-v6-2607-f740-28-c--1d2",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 43,
+        "url": "http://104.225.115.196/api/dcim/sites/43/?format=json",
+        "display": "PDX",
+        "name": "PDX",
+        "slug": "pdx",
+        "description": "NetActuate PoP PDX"
+      },
+      "tenant": null,
+      "device": {
+        "id": 4,
+        "url": "http://104.225.115.196/api/dcim/devices/4/?format=json",
+        "display": "anycast-ingress-pdx.worker.demo",
+        "name": "anycast-ingress-pdx.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 86,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/86/?format=json",
+        "display": "2607:f740:28:c::1cf/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:28:c::1cf/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 166,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/166/?format=json",
+        "display": "2607:f740:28:c::1d2/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:28:c::1d2/128",
+        "description": "NetActuate peer for anycast-ingress-pdx.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.728695Z",
+      "last_updated": "2025-10-06T04:51:53.728712Z",
+      "name": "anycast-ingress-pdx.worker.demo-v6-2607-f740-28-c--1d2",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 33,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/33/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-ams.worker.demo:anycast-ingress-ams.worker.demo-v4-176-58-93-3",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 46,
+        "url": "http://104.225.115.196/api/dcim/sites/46/?format=json",
+        "display": "AMS",
+        "name": "AMS",
+        "slug": "ams",
+        "description": "NetActuate PoP AMS"
+      },
+      "tenant": null,
+      "device": {
+        "id": 1,
+        "url": "http://104.225.115.196/api/dcim/devices/1/?format=json",
+        "display": "anycast-ingress-ams.worker.demo",
+        "name": "anycast-ingress-ams.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 49,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/49/?format=json",
+        "display": "176.58.93.156/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "176.58.93.156/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 140,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/140/?format=json",
+        "display": "176.58.93.3/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "176.58.93.3/32",
+        "description": "NetActuate peer for anycast-ingress-ams.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.763017Z",
+      "last_updated": "2025-10-06T04:51:53.763035Z",
+      "name": "anycast-ingress-ams.worker.demo-v4-176-58-93-3",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 34,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/34/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-ams.worker.demo:anycast-ingress-ams.worker.demo-v6-2a00-dd80-3c--433",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 46,
+        "url": "http://104.225.115.196/api/dcim/sites/46/?format=json",
+        "display": "AMS",
+        "name": "AMS",
+        "slug": "ams",
+        "description": "NetActuate PoP AMS"
+      },
+      "tenant": null,
+      "device": {
+        "id": 1,
+        "url": "http://104.225.115.196/api/dcim/devices/1/?format=json",
+        "display": "anycast-ingress-ams.worker.demo",
+        "name": "anycast-ingress-ams.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 85,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/85/?format=json",
+        "display": "2a00:dd80:3c::11d/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:3c::11d/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 159,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/159/?format=json",
+        "display": "2a00:dd80:3c::433/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:3c::433/128",
+        "description": "NetActuate peer for anycast-ingress-ams.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.802347Z",
+      "last_updated": "2025-10-06T04:51:53.802367Z",
+      "name": "anycast-ingress-ams.worker.demo-v6-2a00-dd80-3c--433",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 35,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/35/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-dfw.worker.demo:anycast-ingress-dfw.worker.demo-v6-2607-f740-100--62b",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 48,
+        "url": "http://104.225.115.196/api/dcim/sites/48/?format=json",
+        "display": "DFW",
+        "name": "DFW",
+        "slug": "dfw",
+        "description": "NetActuate PoP DFW"
+      },
+      "tenant": null,
+      "device": {
+        "id": 2,
+        "url": "http://104.225.115.196/api/dcim/devices/2/?format=json",
+        "display": "anycast-ingress-dfw.worker.demo",
+        "name": "anycast-ingress-dfw.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 105,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/105/?format=json",
+        "display": "2607:f740:100::e04/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:100::e04/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 175,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/175/?format=json",
+        "display": "2607:f740:100::62b/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:100::62b/128",
+        "description": "NetActuate peer for anycast-ingress-dfw.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.812211Z",
+      "last_updated": "2025-10-06T04:51:53.812258Z",
+      "name": "anycast-ingress-dfw.worker.demo-v6-2607-f740-100--62b",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 36,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/36/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-lax.worker.demo:anycast-ingress-lax.worker.demo-v6-2607-f740-c--6cf",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 56,
+        "url": "http://104.225.115.196/api/dcim/sites/56/?format=json",
+        "display": "LAX",
+        "name": "LAX",
+        "slug": "lax",
+        "description": "NetActuate PoP LAX"
+      },
+      "tenant": null,
+      "device": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/dcim/devices/6/?format=json",
+        "display": "anycast-ingress-lax.worker.demo",
+        "name": "anycast-ingress-lax.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 94,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/94/?format=json",
+        "display": "2607:f740:c::f21/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:c::f21/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 162,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/162/?format=json",
+        "display": "2607:f740:c::6cf/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:c::6cf/128",
+        "description": "NetActuate peer for anycast-ingress-lax.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.862432Z",
+      "last_updated": "2025-10-06T04:51:53.862462Z",
+      "name": "anycast-ingress-lax.worker.demo-v6-2607-f740-c--6cf",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 37,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/37/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-sea.worker.demo:anycast-ingress-sea.worker.demo-v4-192-73-240-46",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 39,
+        "url": "http://104.225.115.196/api/dcim/sites/39/?format=json",
+        "display": "SEA",
+        "name": "SEA",
+        "slug": "sea",
+        "description": "NetActuate PoP SEA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 23,
+        "url": "http://104.225.115.196/api/dcim/devices/23/?format=json",
+        "display": "anycast-ingress-sea.worker.demo",
+        "name": "anycast-ingress-sea.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 38,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/38/?format=json",
+        "display": "192.73.240.163/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.240.163/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 110,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/110/?format=json",
+        "display": "192.73.240.46/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "192.73.240.46/32",
+        "description": "NetActuate peer for anycast-ingress-sea.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.898907Z",
+      "last_updated": "2025-10-06T04:51:53.898928Z",
+      "name": "anycast-ingress-sea.worker.demo-v4-192-73-240-46",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 38,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/38/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-waw.worker.demo:anycast-ingress-waw.worker.demo-v6-2a00-dd80-40-100--312",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 64,
+        "url": "http://104.225.115.196/api/dcim/sites/64/?format=json",
+        "display": "WAW",
+        "name": "WAW",
+        "slug": "waw",
+        "description": "NetActuate PoP WAW"
+      },
+      "tenant": null,
+      "device": {
+        "id": 17,
+        "url": "http://104.225.115.196/api/dcim/devices/17/?format=json",
+        "display": "anycast-ingress-waw.worker.demo",
+        "name": "anycast-ingress-waw.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 79,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/79/?format=json",
+        "display": "2a00:dd80:40:100::241/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:40:100::241/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 177,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/177/?format=json",
+        "display": "2a00:dd80:40:100::312/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:40:100::312/128",
+        "description": "NetActuate peer for anycast-ingress-waw.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.903148Z",
+      "last_updated": "2025-10-06T04:51:53.903168Z",
+      "name": "anycast-ingress-waw.worker.demo-v6-2a00-dd80-40-100--312",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 39,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/39/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-lga.worker.demo:anycast-ingress-lga.worker.demo-v6-2607-f740-f--8da",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 54,
+        "url": "http://104.225.115.196/api/dcim/sites/54/?format=json",
+        "display": "LGA",
+        "name": "LGA",
+        "slug": "lga",
+        "description": "NetActuate PoP LGA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 8,
+        "url": "http://104.225.115.196/api/dcim/devices/8/?format=json",
+        "display": "anycast-ingress-lga.worker.demo",
+        "name": "anycast-ingress-lga.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 108,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/108/?format=json",
+        "display": "2607:f740:f::b8f/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:f::b8f/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 156,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/156/?format=json",
+        "display": "2607:f740:f::8da/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:f::8da/128",
+        "description": "NetActuate peer for anycast-ingress-lga.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.889801Z",
+      "last_updated": "2025-10-06T04:51:53.889831Z",
+      "name": "anycast-ingress-lga.worker.demo-v6-2607-f740-f--8da",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 40,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/40/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-sea.worker.demo:anycast-ingress-sea.worker.demo-v6-2607-f740-14--693",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 39,
+        "url": "http://104.225.115.196/api/dcim/sites/39/?format=json",
+        "display": "SEA",
+        "name": "SEA",
+        "slug": "sea",
+        "description": "NetActuate PoP SEA"
+      },
+      "tenant": null,
+      "device": {
+        "id": 23,
+        "url": "http://104.225.115.196/api/dcim/devices/23/?format=json",
+        "display": "anycast-ingress-sea.worker.demo",
+        "name": "anycast-ingress-sea.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 73,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/73/?format=json",
+        "display": "2607:f740:14::fb/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:14::fb/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 155,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/155/?format=json",
+        "display": "2607:f740:14::693/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2607:f740:14::693/128",
+        "description": "NetActuate peer for anycast-ingress-sea.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:53.950823Z",
+      "last_updated": "2025-10-06T04:51:53.950839Z",
+      "name": "anycast-ingress-sea.worker.demo-v6-2607-f740-14--693",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 41,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/41/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-mad.worker.demo:anycast-ingress-mad.worker.demo-v6-2a00-dd80-14-10--256",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 47,
+        "url": "http://104.225.115.196/api/dcim/sites/47/?format=json",
+        "display": "MAD",
+        "name": "MAD",
+        "slug": "mad",
+        "description": "NetActuate PoP MAD"
+      },
+      "tenant": null,
+      "device": {
+        "id": 21,
+        "url": "http://104.225.115.196/api/dcim/devices/21/?format=json",
+        "display": "anycast-ingress-mad.worker.demo",
+        "name": "anycast-ingress-mad.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 93,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/93/?format=json",
+        "display": "2a00:dd80:14:10::270/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:14:10::270/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 163,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/163/?format=json",
+        "display": "2a00:dd80:14:10::256/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:14:10::256/128",
+        "description": "NetActuate peer for anycast-ingress-mad.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.051703Z",
+      "last_updated": "2025-10-06T04:51:54.051723Z",
+      "name": "anycast-ingress-mad.worker.demo-v6-2a00-dd80-14-10--256",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 42,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/42/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-mad.worker.demo:anycast-ingress-mad.worker.demo-v4-45-159-97-39",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 47,
+        "url": "http://104.225.115.196/api/dcim/sites/47/?format=json",
+        "display": "MAD",
+        "name": "MAD",
+        "slug": "mad",
+        "description": "NetActuate PoP MAD"
+      },
+      "tenant": null,
+      "device": {
+        "id": 21,
+        "url": "http://104.225.115.196/api/dcim/devices/21/?format=json",
+        "display": "anycast-ingress-mad.worker.demo",
+        "name": "anycast-ingress-mad.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 54,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/54/?format=json",
+        "display": "45.159.97.59/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "45.159.97.59/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 120,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/120/?format=json",
+        "display": "45.159.97.39/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "45.159.97.39/32",
+        "description": "NetActuate peer for anycast-ingress-mad.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.086808Z",
+      "last_updated": "2025-10-06T04:51:54.086830Z",
+      "name": "anycast-ingress-mad.worker.demo-v4-45-159-97-39",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 43,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/43/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-cdg.worker.demo:anycast-ingress-cdg.worker.demo-v4-176-58-90-224",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 45,
+        "url": "http://104.225.115.196/api/dcim/sites/45/?format=json",
+        "display": "CDG",
+        "name": "CDG",
+        "slug": "cdg",
+        "description": "NetActuate PoP CDG"
+      },
+      "tenant": null,
+      "device": {
+        "id": 24,
+        "url": "http://104.225.115.196/api/dcim/devices/24/?format=json",
+        "display": "anycast-ingress-cdg.worker.demo",
+        "name": "anycast-ingress-cdg.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 52,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/52/?format=json",
+        "display": "176.58.90.141/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "176.58.90.141/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 136,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/136/?format=json",
+        "display": "176.58.90.224/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "176.58.90.224/32",
+        "description": "NetActuate peer for anycast-ingress-cdg.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.211646Z",
+      "last_updated": "2025-10-06T04:51:54.211672Z",
+      "name": "anycast-ingress-cdg.worker.demo-v4-176-58-90-224",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 44,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/44/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-hkg.worker.demo:anycast-ingress-hkg.worker.demo-v4-103-6-84-16",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 73,
+        "url": "http://104.225.115.196/api/dcim/sites/73/?format=json",
+        "display": "HKG",
+        "name": "HKG",
+        "slug": "hkg",
+        "description": "NetActuate PoP HKG"
+      },
+      "tenant": null,
+      "device": {
+        "id": 20,
+        "url": "http://104.225.115.196/api/dcim/devices/20/?format=json",
+        "display": "anycast-ingress-hkg.worker.demo",
+        "name": "anycast-ingress-hkg.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 71,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/71/?format=json",
+        "display": "103.6.84.125/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "103.6.84.125/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 135,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/135/?format=json",
+        "display": "103.6.84.16/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "103.6.84.16/32",
+        "description": "NetActuate peer for anycast-ingress-hkg.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.208608Z",
+      "last_updated": "2025-10-06T04:51:54.208632Z",
+      "name": "anycast-ingress-hkg.worker.demo-v4-103-6-84-16",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 45,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/45/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-otp.worker.demo:anycast-ingress-otp.worker.demo-v6-2a00-dd80-10--1c",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 63,
+        "url": "http://104.225.115.196/api/dcim/sites/63/?format=json",
+        "display": "OTP",
+        "name": "OTP",
+        "slug": "otp",
+        "description": "NetActuate PoP OTP"
+      },
+      "tenant": null,
+      "device": {
+        "id": 22,
+        "url": "http://104.225.115.196/api/dcim/devices/22/?format=json",
+        "display": "anycast-ingress-otp.worker.demo",
+        "name": "anycast-ingress-otp.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 87,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/87/?format=json",
+        "display": "2a00:dd80:10::48/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:10::48/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 146,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/146/?format=json",
+        "display": "2a00:dd80:10::1c/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2a00:dd80:10::1c/128",
+        "description": "NetActuate peer for anycast-ingress-otp.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.217684Z",
+      "last_updated": "2025-10-06T04:51:54.217706Z",
+      "name": "anycast-ingress-otp.worker.demo-v6-2a00-dd80-10--1c",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 46,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/46/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-hkg.worker.demo:anycast-ingress-hkg.worker.demo-v6-2403-2500-8000-1--169",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 73,
+        "url": "http://104.225.115.196/api/dcim/sites/73/?format=json",
+        "display": "HKG",
+        "name": "HKG",
+        "slug": "hkg",
+        "description": "NetActuate PoP HKG"
+      },
+      "tenant": null,
+      "device": {
+        "id": 20,
+        "url": "http://104.225.115.196/api/dcim/devices/20/?format=json",
+        "display": "anycast-ingress-hkg.worker.demo",
+        "name": "anycast-ingress-hkg.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 104,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/104/?format=json",
+        "display": "2403:2500:8000:1::71/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2403:2500:8000:1::71/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 182,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/182/?format=json",
+        "display": "2403:2500:8000:1::169/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2403:2500:8000:1::169/128",
+        "description": "NetActuate peer for anycast-ingress-hkg.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.223389Z",
+      "last_updated": "2025-10-06T04:51:54.223411Z",
+      "name": "anycast-ingress-hkg.worker.demo-v6-2403-2500-8000-1--169",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 47,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/47/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-otp.worker.demo:anycast-ingress-otp.worker.demo-v4-185-40-235-123",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 63,
+        "url": "http://104.225.115.196/api/dcim/sites/63/?format=json",
+        "display": "OTP",
+        "name": "OTP",
+        "slug": "otp",
+        "description": "NetActuate PoP OTP"
+      },
+      "tenant": null,
+      "device": {
+        "id": 22,
+        "url": "http://104.225.115.196/api/dcim/devices/22/?format=json",
+        "display": "anycast-ingress-otp.worker.demo",
+        "name": "anycast-ingress-otp.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 60,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/60/?format=json",
+        "display": "185.40.235.254/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "185.40.235.254/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 124,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/124/?format=json",
+        "display": "185.40.235.123/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "185.40.235.123/32",
+        "description": "NetActuate peer for anycast-ingress-otp.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.252484Z",
+      "last_updated": "2025-10-06T04:51:54.252517Z",
+      "name": "anycast-ingress-otp.worker.demo-v4-185-40-235-123",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 64,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/64/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-tyo.worker.demo:anycast-ingress-tyo.worker.demo-v4-103-84-155-150",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 74,
+        "url": "http://104.225.115.196/api/dcim/sites/74/?format=json",
+        "display": "TYO",
+        "name": "TYO",
+        "slug": "tyo",
+        "description": "NetActuate PoP TYO"
+      },
+      "tenant": null,
+      "device": {
+        "id": 35,
+        "url": "http://104.225.115.196/api/dcim/devices/35/?format=json",
+        "display": "anycast-ingress-tyo.worker.demo",
+        "name": "anycast-ingress-tyo.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 70,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/70/?format=json",
+        "display": "103.84.155.214/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "103.84.155.214/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 109,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/109/?format=json",
+        "display": "103.84.155.150/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "103.84.155.150/32",
+        "description": "NetActuate peer for anycast-ingress-tyo.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:55.012554Z",
+      "last_updated": "2025-10-06T04:51:55.012571Z",
+      "name": "anycast-ingress-tyo.worker.demo-v4-103-84-155-150",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 73,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/73/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-dxb.worker.demo:anycast-ingress-dxb.worker.demo-v4-185-34-3-94",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 65,
+        "url": "http://104.225.115.196/api/dcim/sites/65/?format=json",
+        "display": "DXB",
+        "name": "DXB",
+        "slug": "dxb",
+        "description": "NetActuate PoP DXB"
+      },
+      "tenant": null,
+      "device": {
+        "id": 37,
+        "url": "http://104.225.115.196/api/dcim/devices/37/?format=json",
+        "display": "anycast-ingress-dxb.worker.demo",
+        "name": "anycast-ingress-dxb.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 65,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/65/?format=json",
+        "display": "185.34.3.126/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "185.34.3.126/32",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 127,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/127/?format=json",
+        "display": "185.34.3.94/32",
+        "family": {
+          "value": 4,
+          "label": "IPv4"
+        },
+        "address": "185.34.3.94/32",
+        "description": "NetActuate peer for anycast-ingress-dxb.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:55.350568Z",
+      "last_updated": "2025-10-06T04:51:55.350586Z",
+      "name": "anycast-ingress-dxb.worker.demo-v4-185-34-3-94",
+      "description": "",
+      "comments": ""
+    },
+    {
+      "id": 48,
+      "url": "http://104.225.115.196/api/plugins/bgp/bgpsession/48/?format=json",
+      "tags": [
+        {
+          "id": 5,
+          "url": "http://104.225.115.196/api/extras/tags/5/?format=json",
+          "display_url": "http://104.225.115.196/extras/tags/5/?format=json",
+          "display": "anycast",
+          "name": "anycast",
+          "slug": "anycast",
+          "color": "9e9e9e"
+        }
+      ],
+      "custom_fields": {},
+      "display": "anycast-ingress-sin.worker.demo:anycast-ingress-sin.worker.demo-v6-2403-2500-300--105",
+      "status": {
+        "value": "active",
+        "label": "Active"
+      },
+      "site": {
+        "id": 71,
+        "url": "http://104.225.115.196/api/dcim/sites/71/?format=json",
+        "display": "SIN",
+        "name": "SIN",
+        "slug": "sin",
+        "description": "NetActuate PoP SIN"
+      },
+      "tenant": null,
+      "device": {
+        "id": 26,
+        "url": "http://104.225.115.196/api/dcim/devices/26/?format=json",
+        "display": "anycast-ingress-sin.worker.demo",
+        "name": "anycast-ingress-sin.worker.demo",
+        "description": ""
+      },
+      "local_address": {
+        "id": 103,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/103/?format=json",
+        "display": "2403:2500:300::c65/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2403:2500:300::c65/128",
+        "description": ""
+      },
+      "remote_address": {
+        "id": 171,
+        "url": "http://104.225.115.196/api/ipam/ip-addresses/171/?format=json",
+        "display": "2403:2500:300::105/128",
+        "family": {
+          "value": 6,
+          "label": "IPv6"
+        },
+        "address": "2403:2500:300::105/128",
+        "description": "NetActuate peer for anycast-ingress-sin.worker.demo"
+      },
+      "local_as": {
+        "id": 5,
+        "url": "http://104.225.115.196/api/ipam/asns/5/?format=json",
+        "display": "AS63911",
+        "asn": 63911,
+        "description": "Demo ASN for anycast ingress"
+      },
+      "remote_as": {
+        "id": 6,
+        "url": "http://104.225.115.196/api/ipam/asns/6/?format=json",
+        "display": "AS36236",
+        "asn": 36236,
+        "description": "Remote upstream ASN for anycast peers"
+      },
+      "peer_group": null,
+      "import_policies": [],
+      "export_policies": [],
+      "prefix_list_in": null,
+      "prefix_list_out": null,
+      "created": "2025-10-06T04:51:54.253514Z",
+      "last_updated": "2025-10-06T04:51:54.253531Z",
+      "name": "anycast-ingress-sin.worker.demo-v6-2403-2500-300--105",
+      "description": "",
+      "comments": ""
+    }
+  ]
+}

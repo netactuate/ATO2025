@@ -1,0 +1,53 @@
+# NetBox v4.1.x configuration (idempotent)
+
+ALLOWED_HOSTS = {{ netbox_allowed_hosts | default(['*']) }}  # tighten for production
+
+# v4.1.x expects DATABASE (singular)
+DATABASE = {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': '{{ netbox_database_name }}',
+    'USER': '{{ netbox_database_user }}',
+    'PASSWORD': '{{ netbox_database_password }}',
+    'HOST': 'localhost',
+    'PORT': '',
+    'CONN_MAX_AGE': 300,
+}
+
+REDIS = {
+    'tasks': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'PASSWORD': '{{ redis_password }}',
+        'DATABASE': 0,
+        'SSL': False,
+    },
+    'caching': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'PASSWORD': '{{ redis_password }}',
+        'DATABASE': 1,
+        'SSL': False,
+    },
+}
+
+# SECRET_KEY is supplied by Ansible (slurped from /etc/netbox/secret.key)
+SECRET_KEY = '{{ netbox_secret_key }}'
+PREFER_IPV4 = {{ netbox_prefer_ipv4 | default(True) | ternary('True', 'False') }}
+TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'en-us'
+METRICS_ENABLED = True
+
+PLUGINS = [
+{% if netbox_enable_bgp_plugin | default(false) %}
+    'netbox_bgp',
+{% endif %}
+]
+
+PLUGINS_CONFIG = {
+{% if netbox_enable_bgp_plugin | default(false) %}
+    'netbox_bgp': {
+        'device_ext_page': '{{ netbox_bgp_device_ext_page | default("right") }}',
+        'top_level_menu': {{ (netbox_bgp_top_level_menu | default(false)) | ternary('True', 'False') }},
+    },
+{% endif %}
+}

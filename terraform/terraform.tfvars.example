@@ -1,0 +1,78 @@
+# Copy this file to terraform/terraform.tfvars and fill in real values.
+
+netbox_url   = "https://netbox.example.com"
+netbox_token = "API_KEY"
+
+# Optional: automatically provision BGP sessions in provider
+bgp_group_id = 3247          # replace with your NetActuate BGP group
+ssh_key_id   = 1234          # replace with the uploaded SSH key id
+
+# PoPs (plan defaults to VR1x1x25, image_id fixed at 5787)
+pops = {
+  ########################################
+  # START (current small US footprint)
+  ########################################
+  RDU  = { location_id = 236, worker_count = 2 } # RDU - Raleigh, NC
+  IAD3 = { location_id = 245 }                   # IAD3 - Ashburn, VA
+  CHI  = { location_id = 31 }                    # CHI - Chicago, IL
+  DEN  = { location_id = 122 }                   # DEN - Denver, CO
+  PDX  = { location_id = 571 }                   # PDX - Portland, OR
+  SEA  = { location_id = 124, worker_count = 2 } # SEA - Seattle, WA
+
+
+  # ########################################
+  # # MIDDLE (expand through all WEST + WESTERN EUROPE)
+  # ########################################
+
+  # # --- WEST: United States ---
+  # ATL = { location_id = 569 } # ATL - Atlanta, GA
+  # DFW = { location_id = 101 } # DFW - Dallas, TX
+  # LAX = { location_id = 21 }  # LAX - Los Angeles, CA
+  # LGA = { location_id = 41 }  # LGA - New York, NY
+  # MCI = { location_id = 564 } # MCI - Kansas City, MO
+  # MIA = { location_id = 123 } # MIA - Miami, FL
+  # PHX = { location_id = 290 } # PHX - Phoenix, AZ
+  # SJC = { location_id = 3 }   # SJC - San Jose, CA
+
+  # # --- WEST: Canada ---
+  # TOR = { location_id = 127 } # TOR - Toronto, CA
+  # YUL = { location_id = 565 } # YUL - Montreal, QC
+
+  # # --- WEST: South America ---
+  # GRU = { location_id = 182 } # GRU - Sao Paulo, Brazil
+  # SCL = { location_id = 488 } # SCL - Santiago, Chile
+
+  # # --- WESTERN EUROPE ---
+  # AMS = { location_id = 72 }  # AMS - Amsterdam, NL
+  # CDG = { location_id = 82 }  # CDG - Paris, France
+  # DUB = { location_id = 570 } # DUB - Dublin, IE
+  # FRA = { location_id = 164 } # FRA - Frankfurt, DE
+  # LHR = { location_id = 71 }  # LHR - London, UK
+  # MAD = { location_id = 524 } # MAD - Madrid, Spain
+  # MAN = { location_id = 561 } # MAN - Manchester, UK
+
+
+  ########################################
+  # END (spread east: EASTERN EUROPE → ME/India/Africa → Asia → Australia)
+  ########################################
+
+  # --- EASTERN EUROPE ---
+  # OTP = { location_id = 146 } # OTP - Bucharest, RO
+  # WAW = { location_id = 551 } # WAW - Warsaw, PL
+
+  # # --- Middle East / India / Africa ---
+  # ACC = { location_id = 568 } # ACC - Accra, GH
+  # BOM = { location_id = 567 } # BOM - Mumbai, IN
+  # DXB = { location_id = 380 } # DXB - Dubai, UAE
+  # JNB = { location_id = 371 } # JNB - Johannesburg, ZA
+  # NBO = { location_id = 566 } # NBO - Nairobi, KE
+  # MAA = { location_id = 61 }  # MAA - Chennai, IN
+
+  # # --- Asia ---
+  # HKG = { location_id = 83 }  # HKG - Hong Kong, HK
+  # SIN = { location_id = 173 } # SIN - Singapore, SG
+  # TYO = { location_id = 335 } # TYO - Tokyo, JP
+
+  # # --- Australia ---
+  # SYD = { location_id = 137 } # SYD - Sydney, AU
+}
