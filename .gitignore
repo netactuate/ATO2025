@@ -9,3 +9,4 @@
 terraform/*.tfvars
 terraform/*.auto.tfvars
 !terraform/terraform.tfvars.example
+*backup*
