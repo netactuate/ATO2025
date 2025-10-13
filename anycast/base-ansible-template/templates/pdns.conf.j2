@@ -1,0 +1,25 @@
+launch=gmysql
+gmysql-host=127.0.0.1
+gmysql-user={{ pdns_db_user }}
+gmysql-password={{ pdns_db_password }}
+gmysql-dbname={{ pdns_db_name }}
+
+{% if pdns_anycast_ip is defined %}
+local-address={{ pdns_anycast_ip }}
+{% endif %}
+
+api=yes
+api-key={{ pdns_auth_api_key }}
+webserver=yes
+webserver-address=127.0.0.1
+webserver-port=8081
+
+{% if groups['powerdns_servers'] | length > 1 and inventory_hostname == groups['powerdns_servers'][0] %}
+allow-axfr-ips={{ pdns_slave_ips }}
+{% endif %}
+
+{% if groups['powerdns_servers'] | length > 1 and inventory_hostname != groups['powerdns_servers'][0] %}
+slave=yes
+{% endif %}
+
+loglevel=9

@@ -1,0 +1,28 @@
+[master]
+localhost ansible_connection=local ansible_python_interpreter=python3
+
+[nodes:children]
+backend
+
+[backend:children]
+chi
+den
+iad3
+pdx
+rdu
+sea
+
+[chi]
+anycast-ingress-chi-w01.worker.demo location=chi worker=w01 bgp_enabled=True plan='VR1x1x25' mbpkgid=572438 ansible_host=209.177.158.84
+[den]
+anycast-ingress-den-w01.worker.demo location=den worker=w01 bgp_enabled=True plan='VR1x1x25' mbpkgid=572464 ansible_host=192.73.242.248
+[iad3]
+anycast-ingress-iad3-w01.worker.demo location=iad3 worker=w01 bgp_enabled=True plan='VR1x1x25' mbpkgid=572440 ansible_host=104.225.8.199
+[pdx]
+anycast-ingress-pdx-w01.worker.demo location=pdx worker=w01 bgp_enabled=True plan='VR1x1x25' mbpkgid=572465 ansible_host=104.225.28.163
+[rdu]
+anycast-ingress-rdu-w01.worker.demo location=rdu worker=w01 bgp_enabled=True plan='VR1x1x25' mbpkgid=572442 ansible_host=162.223.10.21
+anycast-ingress-rdu-w02.worker.demo location=rdu worker=w02 bgp_enabled=True plan='VR1x1x25' mbpkgid=572471 ansible_host=104.225.1.55
+[sea]
+anycast-ingress-sea-w01.worker.demo location=sea worker=w01 bgp_enabled=True plan='VR1x1x25' mbpkgid=572466 ansible_host=192.73.240.53
+anycast-ingress-sea-w02.worker.demo location=sea worker=w02 bgp_enabled=True plan='VR1x1x25' mbpkgid=572476 ansible_host=192.73.240.93

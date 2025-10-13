@@ -1,0 +1,35 @@
+- name: Install FRR
+  apt:
+    name: frr
+    state: present
+    update_cache: yes
+
+- name: Enable bgpd and vtysh in /etc/frr/daemons
+  lineinfile:
+    path: /etc/frr/daemons
+    regexp: '^{{ item.option }}='
+    line: '{{ item.option }}=yes'
+  loop:
+    - { option: 'bgpd' }
+    - { option: 'vtysh_enable' }
+
+- name: Configure FRR BGP
+  template:
+    src: frr.conf.j2
+    dest: /etc/frr/frr.conf
+    owner: frr
+    group: frr
+    mode: '0644'
+
+- name: Enable and start FRR
+  systemd:
+    name: frr
+    enabled: true
+    state: started
+
+- name: Force restart FRR and reload systemd
+  systemd:
+    name: frr
+    enabled: true
+    daemon_reload: yes
+    state: restarted

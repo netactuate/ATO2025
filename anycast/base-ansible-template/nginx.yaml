@@ -1,0 +1,37 @@
+- name: Deploy Backend with Nginx
+  hosts: backend
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Create a Hello World Page
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+          <head><title>Backend Hello</title></head>
+          <body><h1>Hello from {{ inventory_hostname }}</h1></body>
+          </html>
+
+    - name: Configure Nginx to bind to anycast IP
+      when: hostvars[inventory_hostname].bgp_enabled | bool and hostvars[inventory_hostname].nginx_anycast_ip is defined
+      block:
+        - name: Update Nginx default site to bind to anycast IP
+          lineinfile:
+            path: /etc/nginx/sites-available/default
+            regexp: '^\\s*listen\\s+80'
+            line: "        listen {{ nginx_anycast_ip }}:80;"
+            backup: yes
+
+    - name: Ensure Nginx is running and enabled
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+- import_playbook: netactuate-netbox-enhanced.yaml

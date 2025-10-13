@@ -1,0 +1,182 @@
+- name: Fetch the node information
+  hosts: backend
+  tags:
+    - setup
+  gather_facts: no
+  serial: 1
+
+  tasks:
+  - name: Node lookup
+    netactuate.compute.bgp:
+      auth_token: '{{ auth_token }}'
+      hostname: '{{ inventory_hostname }}'
+      build: true
+      group_id: '{{ bgp_group }}'
+      ipv6: false
+      redundant: false
+    delegate_to: localhost
+    register: na
+
+  - name: Initialize node configuration
+    set_fact:
+      nodesetup: {}
+    when: nodesetup is not defined
+
+  - name: Append node configuration
+    set_fact:
+      nodesetup: "{{ nodesetup | combine(na.device) }}"
+
+  - name: Set SSH IP
+    set_fact:
+      ansible_ssh_host: "{{ na.device.public_ipv4 }}"
+
+  - name: Update node vars
+    template:
+      src: nodevars.yml
+      dest: "./host_vars/{{ inventory_hostname }}"
+    delegate_to: localhost
+
+- name: Setup BGP on nodes
+  hosts: backend
+  remote_user: ubuntu
+  become: true
+  gather_facts: yes
+  roles:
+    - role: ssh
+      tags: ssh
+    - role: rc.local
+      tags: rc.local
+    - role: frr
+      tags: frr
+    # - role: bird
+    #   tags: bird
+
+  post_tasks:
+    - name: Update NetBox BGP metadata from live FRR state
+      vars:
+        netbox_url: "{{ lookup('env', 'NETBOX_URL') | default('', true) }}"
+        netbox_token: "{{ lookup('env', 'NETBOX_TOKEN') | default('', true) }}"
+      when:
+        - (netbox_url | length) > 0
+        - (netbox_token | length) > 0
+      block:
+        - name: Lookup NetBox VM by hostname
+          uri:
+            url: "{{ netbox_url }}/virtualization/virtual-machines/?name={{ inventory_hostname }}"
+            method: GET
+            headers:
+              Authorization: "Token {{ netbox_token }}"
+            return_content: yes
+          delegate_to: localhost
+          register: nb_vm_lookup
+          failed_when: false
+
+        - name: Cache NetBox VM identifier
+          set_fact:
+            netbox_vm_id: "{{ (nb_vm_lookup.json.results | first).id }}"
+          when: nb_vm_lookup.json.count | default(0) | int > 0
+
+        - name: Lookup NetBox BGP service
+          uri:
+            url: "{{ netbox_url }}/ipam/services/?virtual_machine_id={{ netbox_vm_id }}&name=bgp"
+            method: GET
+            headers:
+              Authorization: "Token {{ netbox_token }}"
+            return_content: yes
+          delegate_to: localhost
+          register: nb_bgp_service_lookup
+          when: netbox_vm_id is defined
+
+        - name: Mark NetBox BGP service active after FRR configuration
+          uri:
+            url: "{{ netbox_url }}/ipam/services/{{ (nb_bgp_service_lookup.json.results | first).id }}/"
+            method: PATCH
+            headers:
+              Authorization: "Token {{ netbox_token }}"
+              Content-Type: "application/json"
+            body_format: json
+            body:
+              status: "active"
+              comments: "FRR configured at {{ ansible_date_time.iso8601 }}"
+          delegate_to: localhost
+          when:
+            - nb_bgp_service_lookup is defined
+            - nb_bgp_service_lookup.json.count | default(0) | int > 0
+
+        - name: Gather FRR BGP summary data
+          command: vtysh -c "show bgp summary json"
+          register: frr_bgp_summary_raw
+          changed_when: false
+          failed_when: false
+
+        - name: Parse FRR BGP summary JSON
+          set_fact:
+            frr_bgp_summary: "{{ (frr_bgp_summary_raw.stdout | default('{}', true)) | from_json }}"
+          failed_when: false
+
+        - name: Build FRR neighbor map
+          set_fact:
+            frr_neighbor_map: >-
+              {{
+                frr_neighbor_map | default({}) | combine({
+                  item.key | lower: {
+                    'state': item.value.state | default(item.value.peerState | default(item.value.bgpState | default(''))),
+                    'prefixes': item.value.prefixReceived | default(item.value.pfxRcd | default(item.value.prefixes | default(0))),
+                    'uptime': item.value.uptime | default(item.value.peerUptime | default('')),
+                    'raw': item.value
+                  }
+                })
+              }}
+          loop: "{{ (frr_bgp_summary.neighbors | default({})) | dict2items }}"
+
+        - name: Retrieve NetBox BGP sessions for VM
+          uri:
+            url: "{{ netbox_url }}/plugins/bgp/session/?virtualmachine_id={{ netbox_vm_id }}"
+            method: GET
+            headers:
+              Authorization: "Token {{ netbox_token }}"
+            return_content: yes
+          delegate_to: localhost
+          register: nb_bgp_sessions
+          when: netbox_vm_id is defined
+
+        - name: Update NetBox BGP session status/comments
+          uri:
+            url: "{{ netbox_url }}/plugins/bgp/session/{{ item.id }}/"
+            method: PATCH
+            headers:
+              Authorization: "Token {{ netbox_token }}"
+              Content-Type: "application/json"
+            body_format: json
+            body:
+              status: "{{ target_status }}"
+              comments: "{{ comment_text }}"
+          loop: "{{ nb_bgp_sessions.json.results | default([]) }}"
+          loop_control:
+            label: "{{ item.remote_address.address }}"
+          delegate_to: localhost
+          vars:
+            remote_ip: "{{ (item.remote_address.address | regex_replace('(/\\d+)$', '') | lower) }}"
+            neighbor: "{{ frr_neighbor_map.get(remote_ip, {}) }}"
+            neighbor_state_raw: "{{ neighbor.state | default('') | string | lower }}"
+            current_status: "{{ item.status.value | default('active') }}"
+            target_status: >-
+              {{
+                'active' if neighbor_state_raw | regex_search('estab|up|ok|run')
+                else 'planned' if neighbor_state_raw in ['connect', 'connecting', 'opensent', 'openconfirm', 'active']
+                else 'failed' if neighbor_state_raw in ['failed', 'down']
+                else 'offline' if neighbor_state_raw in ['idle', 'idle (admin)']
+                else current_status
+              }}
+            comment_lines:
+              - "Managed by bgp.yaml on {{ ansible_date_time.iso8601 }}"
+              - "FRR state: {{ neighbor.state | default('Unknown') }}"
+              - "Prefixes received: {{ neighbor.prefixes | default('N/A') }}"
+              - "Uptime: {{ neighbor.uptime | default('N/A') }}"
+              - "Remote address: {{ remote_ip }}"
+            comment_text: "{{ comment_lines | select('length') | join('\\n') }}"
+          when:
+            - nb_bgp_sessions is defined
+            - nb_bgp_sessions.json.count | default(0) | int > 0
+
+# - import_playbook: netactuate-netbox-enhanced.yaml

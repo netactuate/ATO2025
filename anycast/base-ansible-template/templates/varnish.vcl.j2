@@ -1,0 +1,37 @@
+vcl 4.1;
+import directors;
+
+{% if backend_servers | length > 1 %}
+# Define multiple backends
+{% for server in backend_servers %}
+backend {{ server.name | replace('.', '_') }} {
+    .host = "{{ server.ip }}";
+    .port = "80";
+}
+{% endfor %}
+
+sub vcl_init {
+    new bar = directors.round_robin();
+    {% for server in backend_servers %}
+    bar.add_backend({{ server.name | replace('.', '_') }});
+    {% endfor %}
+}
+
+sub vcl_recv {
+    set req.backend_hint = bar.backend();
+}
+{% else %}
+# Single backend fallback
+backend default {
+    .host = "{{ backend_servers[0].ip }}";
+    .port = "80";
+}
+
+sub vcl_recv {
+    set req.backend_hint = default;
+}
+{% endif %}
+
+sub vcl_backend_response {
+    set beresp.ttl = 1m;
+}

@@ -1,0 +1,16 @@
+---
+auth_token: "API_KEY"
+ansible_ssh_extra_args: '-o StrictHostKeyChecking=no'
+ansible_ssh_user: ubuntu
+
+ssh_public_key: keys.pub
+operating_system: 'Ubuntu 24.04 LTS (20240423)'
+bgp_group: 3247
+contract_id: 440
+
+#NetActuate Test Prefix configuration for BIRD/worker
+bgp_networks:
+    IPv4:
+    - { net: "45.54.50.0/24", ips: [ "45.54.50.1" ], origin: "63911" }
+
+nginx_anycast_ip: "45.54.50.1"

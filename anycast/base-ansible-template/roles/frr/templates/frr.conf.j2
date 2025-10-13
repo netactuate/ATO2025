@@ -1,0 +1,43 @@
+frr version 8.4.4
+frr defaults traditional
+hostname {{ nodesetup.hostname | default(inventory_hostname) }}
+log syslog informational
+service integrated-vtysh-config
+!
+debug bgp keepalives
+debug bgp updates in
+debug bgp updates out
+!
+router bgp {{ nodesetup.bgp_peers.localasn }}
+ bgp router-id {{ ansible_ssh_host }}
+ no bgp hard-administrative-reset
+ no bgp graceful-restart notification
+ no bgp network import-check
+{% for peer in nodesetup.bgp_peers.IPv4 %}
+ neighbor {{ peer }} remote-as {{ nodesetup.bgp_peers.peerasn }}
+ neighbor {{ peer }} update-source {{ bgp_networks.IPv4[0].ips[0] }}
+{% endfor %}
+ !
+ address-family ipv4 unicast
+  network {{ bgp_networks.IPv4[0].net }}
+{% for peer in nodesetup.bgp_peers.IPv4 %}
+  neighbor {{ peer }} route-map ACCEPT-IN in
+  neighbor {{ peer }} route-map EXPORT-BGP-V4 out
+{% endfor %}
+ exit-address-family
+exit
+!
+ip prefix-list BGP-ANNOUNCE-V4 seq 5 deny 0.0.0.0/0
+{% for prefix in bgp_networks.IPv4 %}
+ip prefix-list BGP-ANNOUNCE-V4 seq {{ 10 + loop.index }} permit {{ prefix.net }}
+{% endfor %}
+!
+route-map EXPORT-BGP-V4 permit 10
+ match ip address prefix-list BGP-ANNOUNCE-V4
+exit
+!
+route-map ACCEPT-IN permit 10
+exit
+!
+line vty
+!

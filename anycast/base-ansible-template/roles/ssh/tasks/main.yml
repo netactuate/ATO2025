@@ -1,0 +1,11 @@
+# file: roles/ssh/tasks/main.yml
+- name: Ensure SSH authorized key present for target users
+  ansible.builtin.authorized_key:
+    user: "{{ item }}"
+    key: "{{ lookup('file', './' + ssh_public_key) }}"
+  loop:
+    - ubuntu
+    - root
+  when: ssh_public_key is defined
+  tags:
+    - ssh

@@ -1,0 +1,8 @@
+{
+  "vm_fields": {
+    "status": "status",
+    "state": "rewrite",
+    "plan_ram": "rewrite"
+  },
+  "session_fields": {}
+}

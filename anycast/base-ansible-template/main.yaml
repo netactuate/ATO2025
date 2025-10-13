@@ -1,0 +1,5 @@
+---
+- import_playbook: createnode.yaml
+- import_playbook: bgp.yaml
+- import_playbook: nginx.yaml
+- import_playbook: netactuate-netbox-enhanced.yaml
